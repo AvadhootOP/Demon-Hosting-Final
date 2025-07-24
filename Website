@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Demon Hosting</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0a001f, #140020);
+      color: white;
+      overflow-x: hidden;
+    }
+    header {
+      padding: 40px;
+      text-align: center;
+      background: #1a001f;
+      background-image: url('https://i.ibb.co/txzp7rs/smoky-header.png');
+      background-size: cover;
+      background-blend-mode: overlay;
+    }
+    h1 {
+      font-size: 3em;
+      color: #b084ff;
+      text-shadow: 0 0 10px red;
+    }
+    p.tagline {
+      font-size: 1.3em;
+      color: #aaa;
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    .plans {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+    .plan {
+      background: #1f002f;
+      border: 1px solid #800080;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 0 10px #9c27b0aa;
+      transition: 0.3s;
+    }
+    .plan:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 15px #ff00cc;
+    }
+    .plan h2 {
+      color: #ffd700;
+    }
+    .price {
+      font-size: 1.5em;
+      color: #b084ff;
+    }
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 0.9em;
+      color: #aaa;
+    }
+    .button {
+      margin-top: 15px;
+      background: #660066;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .button:hover {
+      background: #9b009b;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>💀 Demon Hosting</h1>
+    <p class="tagline">Where your server unleashes its true power</p>
+  </header>
+
+  <section>
+    <h2>Minecraft Server Plans</h2>
+    <div class="plans">
+      <div class="plan">
+        <h2>Starter</h2>
+        <p class="price">₹179 / month</p>
+        <p>4GB RAM · Shared CPU · SSD · DDoS Protection</p>
+      </div>
+      <div class="plan">
+        <h2>Basic</h2>
+        <p class="price">₹279 / month</p>
+        <p>6GB RAM · Shared CPU · SSD · DDoS Protection</p>
+      </div>
+      <div class="plan">
+        <h2>Standard</h2>
+        <p class="price">₹449 / month</p>
+        <p>6GB RAM · Dedicated CPU · Fast SSD</p>
+      </div>
+      <div class="plan">
+        <h2>Advanced</h2>
+        <p class="price">₹999 / month</p>
+        <p>10GB RAM · Fast CPU · SSD · Plugin Support</p>
+      </div>
+      <div class="plan">
+        <h2>Premium</h2>
+        <p class="price">₹1499 / month</p>
+        <p>16GB RAM · High Performance · Unlimited Plugins</p>
+      </div>
+      <div class="plan">
+        <h2>Demon</h2>
+        <p class="price">₹1999 / month</p>
+        <p>32GB RAM · Demon Power · Premium Support</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>VPS Hosting Plans</h2>
+    <div class="plans">
+      <div class="plan">
+        <h2>VPS Lite</h2>
+        <p class="price">₹299 / month</p>
+        <p>1 vCPU · 1GB RAM · 20GB SSD · 1TB Bandwidth</p>
+      </div>
+      <div class="plan">
+        <h2>VPS Basic</h2>
+        <p class="price">₹599 / month</p>
+        <p>2 vCPU · 2GB RAM · 40GB SSD · 2TB Bandwidth</p>
+      </div>
+      <div class="plan">
+        <h2>VPS Pro</h2>
+        <p class="price">₹899 / month</p>
+        <p>4 vCPU · 4GB RAM · 80GB SSD · 4TB Bandwidth</p>
+      </div>
+      <div class="plan">
+        <h2>VPS Demon</h2>
+        <p class="price">₹1499 / month</p>
+        <p>8 vCPU · 8GB RAM · 160GB SSD · 6TB Bandwidth</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Contact & Payment</h2>
+    <p>Join our <a href="https://discord.gg/yourdiscord" target="_blank" style="color: #b084ff">Discord</a> to place an order.</p>
+    <p>Pay via UPI: <strong>avadhutrairikar@fam</strong></p>
+    <p>🕒 Support Hours: 10 AM – 7 PM</p>
+  </section>
+
+  <footer>
+    &copy; 2025 Demon Hosting. All rights reserved.
+  </footer>
+</body>
+</html>
