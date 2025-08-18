@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Demon Hosting</title>
+  <style>
+    /* Reset + Smooth Scroll */
+    * {margin:0;padding:0;box-sizing:border-box;}
+    html,body {height:100%;font-family: 'Segoe UI', sans-serif;scroll-behavior:smooth;}
+    body {background:#0a0a0a;color:#fff;overflow-x:hidden;}
+
+    /* Intro Screen */
+    #intro {
+      position:fixed;top:0;left:0;width:100%;height:100%;
+      background:radial-gradient(circle at center,#000000,#1a001a,#000);
+      display:flex;flex-direction:column;justify-content:center;align-items:center;
+      z-index:9999;
+      animation: fadeIn 2s ease-in-out;
+    }
+    #intro h1 {
+      font-size:3rem;
+      color:gold;
+      text-shadow:0 0 20px red,0 0 40px purple;
+      animation: pulse 2s infinite alternate;
+    }
+    #intro button {
+      margin-top:2rem;
+      padding:15px 40px;
+      font-size:1.2rem;
+      border:none;
+      border-radius:30px;
+      background:linear-gradient(45deg,red,purple,goldenrod);
+      color:white;
+      cursor:pointer;
+      transition:0.4s;
+      box-shadow:0 0 20px rgba(255,0,0,0.8);
+    }
+    #intro button:hover {
+      transform:scale(1.1);
+      box-shadow:0 0 40px rgba(255,0,0,1);
+    }
+    @keyframes pulse {from{transform:scale(1);}to{transform:scale(1.1);}}
+    @keyframes fadeIn {from{opacity:0;}to{opacity:1;}}
+
+    /* Navbar */
+    nav {
+      position:fixed;top:0;left:0;width:100%;background:rgba(0,0,0,0.7);
+      backdrop-filter: blur(6px);
+      display:flex;justify-content:space-between;align-items:center;
+      padding:15px 40px;z-index:1000;
+    }
+    nav h2 {color:gold;}
+    nav ul {list-style:none;display:flex;gap:20px;}
+    nav ul li a {
+      color:white;text-decoration:none;font-weight:bold;
+      transition:0.3s;
+    }
+    nav ul li a:hover {color:gold;}
+
+    /* Sections */
+    section {min-height:100vh;padding:100px 50px;position:relative;}
+    #hero {
+      display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;
+    }
+    #hero h1 {
+      font-size:3rem;
+      background:linear-gradient(45deg,red,gold,purple);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      animation: glow 3s infinite alternate;
+    }
+    @keyframes glow {
+      from{text-shadow:0 0 10px red;}
+      to{text-shadow:0 0 30px gold;}
+    }
+
+    .btn {
+      margin-top:20px;
+      padding:12px 30px;
+      font-size:1.1rem;
+      border:none;border-radius:25px;
+      background:linear-gradient(45deg,purple,red,gold);
+      color:white;cursor:pointer;transition:0.3s;
+    }
+    .btn:hover {transform:scale(1.1);}
+
+    /* Smoke Effect */
+    .smoke {
+      position:fixed;top:0;left:0;width:100%;height:100%;
+      background:url('https://i.ibb.co/ZhFgL6n/smoke.gif') center/cover no-repeat;
+      opacity:0.1;z-index:-1;
+    }
+
+    /* Particles Canvas */
+    #particles-js {position:fixed;width:100%;height:100%;z-index:-2;top:0;left:0;}
+
+    /* Footer */
+    footer {
+      padding:40px;text-align:center;background:#111;
+      border-top:1px solid rgba(255,255,255,0.2);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Intro Screen -->
+  <div id="intro">
+    <h1>🔥 Welcome to Demon Hosting 🔥</h1>
+    <button onclick="enterSite()">Get Started</button>
+  </div>
+
+  <!-- Smoke + Particles -->
+  <div class="smoke"></div>
+  <div id="particles-js"></div>
+
+  <!-- Navbar -->
+  <nav>
+    <h2>Demon Hosting</h2>
+    <ul>
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section id="hero">
+    <h1>The Demon Has Risen</h1>
+    <p>Premium Minecraft & VPS Hosting with blazing performance</p>
+    <button class="btn" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">Explore More</button>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <h1>About Us</h1>
+    <p>Demon Hosting is designed to give gamers and creators the ultimate server experience. Powered by high-performance Intel processors and blazing fast SSD storage, we make sure your world never lags.</p>
+  </section>
+
+  <!-- Features -->
+  <section id="features">
+    <h1>Our Features</h1>
+    <ul>
+      <li>⚡ Instant Server Setup</li>
+      <li>🎨 Custom Dashboards</li>
+      <li>🔒 DDoS Protection</li>
+      <li>🖥️ Full Root Access</li>
+      <li>💎 Premium Support</li>
+    </ul>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing">
+    <h1>Pricing Plans</h1>
+    <p>Starter, Basic, Standard, Advanced, Premium, and Demon Plans available. Choose what fits your power.</p>
+    <button class="btn">View Plans</button>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h1>Contact Us</h1>
+    <p>Email: support@demonhosting.com</p>
+    <p>Join our Discord for instant support!</p>
+    <button class="btn">Join Discord</button>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Demon Hosting. All rights reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+  <script>
+    // Hide Intro
+    function enterSite(){
+      document.getElementById('intro').style.display='none';
+    }
+
+    // ParticlesJS
+    particlesJS("particles-js", {
+      "particles": {
+        "number": {"value":80,"density":{"enable":true,"value_area":800}},
+        "color":{"value":["#ff0000","#ffcc00","#8000ff"]},
+        "shape":{"type":"circle"},
+        "opacity":{"value":0.5},
+        "size":{"value":3},
+        "move":{"enable":true,"speed":2,"direction":"none","out_mode":"out"}
+      },
+      "interactivity":{
+        "events":{"onhover":{"enable":true,"mode":"repulse"}}
+      }
+    });
+  </script>
+</body>
+</html>
